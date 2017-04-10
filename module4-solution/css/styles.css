@@ -1,16 +1,55 @@
 body {
-  font-size: 1.2em;
+  /*font-size: 1.2em;*/
+  font-family: 'Oxygen', sans-serif;
 }
 
-div.tabs > a, div.tabs > button {
-  margin-right: 10px;
-  font-size: 1.2em;
+li {
+  list-style-type: none;
+  padding: 2px;
 }
 
-div.tabs {
+li.item {
+  /*border: solid 1px #aaaaaa;*/
+  margin: 10px;
+  padding: 4px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.item-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 1.1em;
+  padding-left: 2px;
+}
+
+.item-description {
+  padding-left: 1em;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.activeTab {
-  font-weight: bold;
+.underline {
+  /*width: 80%;*/
+  text-align:left;
+  margin: 0 auto 0 0;
+  border: none;
+  color: #000000;
+  background-color: #aaaaaa;
+  height: 1px;
 }
+
+.item-price-small {
+  font-size: .8em;
+  color: green;
+  margin: 0 4px;
+}
+
+.item-price-large {
+  font-size: .8em;
+  color: blue;
+  margin: 0 4px;
+}
+

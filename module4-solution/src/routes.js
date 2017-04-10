@@ -19,10 +19,9 @@
       templateUrl: 'src/templates/home.template.html'
     })
 
-    // Premade list page
     .state('categories', {
       url: '/categories',
-      templateUrl: 'src/templates/categories.template.html',
+      templateUrl: 'src/templates/main-categories.template.html',
       controller: 'CategoriesController as categoriesCtrl',
       resolve: {
         categories: ['MenuDataService', function (MenuDataService) {
@@ -34,7 +33,12 @@
     .state('items', {
       url: '/items/{categoryId}',
       templateUrl: 'src/templates/items.template.html',
-      controller: "ItemsController as itemsCtrl"
+      controller: "ItemsController as itemsCtrl",
+      resolve: {
+        items: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
+          return MenuDataService.getItemsForCategory($stateParams.categoryId);
+        }]
+      }
     });
 
   }

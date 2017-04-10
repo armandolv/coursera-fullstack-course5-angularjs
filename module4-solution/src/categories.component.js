@@ -4,22 +4,9 @@
   angular.module('MenuApp')
   .component('categories', {
     templateUrl: 'src/templates/categories.template.html',
-    controller: CategoriesController
+    bindings: {
+      categories: '<'
+    }
   });
-
-
-  CategoriesController.$inject = []
-  function CategoriesController() {
-    var $ctrl = this;
-
-    $ctrl.$onInit = function () {
-
-    };
-
-    $ctrl.$onDestroy = function () {
-
-    };
-
-  };
 
 })();

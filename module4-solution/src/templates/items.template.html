@@ -1,0 +1,16 @@
+
+<a ui-sref="categories">&lt;&lt; Categories</a>
+
+<h2>{{itemsCtrl.category.name}}</h2>
+
+<ul>
+  <li class="item" ng-repeat="item in itemsCtrl.items">
+    <div class="item-title">
+        {{item.name}} 
+        <span class="item-price-small" ng-if="item.price_small">{{item.price_small | currency }} Small</span>
+        <span class="item-price-large" ng-if="item.price_large">{{item.price_large | currency}} Large</span>
+    </div>
+    <hr class="underline">
+    <div class="item-description">{{item.description}}</div>
+  </li>
+</ul>
